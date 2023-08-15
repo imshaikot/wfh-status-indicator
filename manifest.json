@@ -1,0 +1,19 @@
+{
+  "name": "Work From Home Meeting Indicator",
+  "description": "Work From Home Meeting Indicator",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["storage", "activeTab"]
+}
