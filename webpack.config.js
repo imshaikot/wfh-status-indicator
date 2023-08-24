@@ -3,7 +3,8 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
-    content: "./script/content.ts",
+    content: "./script/content/index.ts",
+    "web-accessible": "./script/web-accessible.ts",
     background: "./script/background.ts",
   },
   mode: "production",
