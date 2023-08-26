@@ -26,3 +26,19 @@ export const getLeaveButton = () => {
   }
   return null;
 };
+
+function getAncestors(el1: any, el2: any) {
+  var parent = el1.parentElement;
+
+  while (true) {
+    if (parent.contains(el2)) return parent;
+    parent = parent.parentElement;
+  }
+  return null;
+}
+
+export const getButtonPanel = () => {
+  const camera = getButtonElBySelector(CAMERA_LABEL);
+  const mic = getButtonElBySelector(MIC_LABEL);
+  return getAncestors(camera, mic);
+};
